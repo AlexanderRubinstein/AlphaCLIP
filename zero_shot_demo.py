@@ -28,7 +28,7 @@ alpha = alpha.half().cuda().unsqueeze(dim=0)
 
 # calculate image and text features
 image = preprocess(image).unsqueeze(0).half().to(device)
-text = alpha_clip.tokenize(["a goegously dressed woman", "a purple sleeveness dress", "bouquet of pink flowers"]).to(device)
+text = alpha_clip.tokenize(["a gorgeously dressed woman", "a purple sleeveness dress", "bouquet of pink flowers"]).to(device)
 
 with torch.no_grad():
     image_features = model.visual(image, alpha)
